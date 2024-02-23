@@ -9,7 +9,7 @@ pipeline {
             }
             steps {
                 withSonarQubeEnv('SONAR'){
-                    sh "${scannerHome}/bin/sonar-scanner -e -Dsonar.projectKey=agenda-php  -Dsonar.sources=. -Dsonar.host.url=http://10.100.64.240:9000 -Dsonar.login="
+                    sh "${scannerHome}/bin/sonar-scanner -e -Dsonar.projectKey=agenda-php  -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000 -Dsonar.login="
                 }
             }
         }
